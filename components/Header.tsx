@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+
   return (
     <div
       className={`p-4 flex justify-between items-center ${
@@ -21,7 +22,7 @@ function Header() {
         <h1 className="text-xl font-semibold">Expensio</h1>
       </Link>
 
-      <div className="flex items-center spac-x-4">
+      <div className="flex items-center space-x-4">
         <SignedIn>
           <Link href="/receipts">
             <Button variant="outline">My Reciepts</Button>
